@@ -90,9 +90,9 @@ const Header = ({ toggleSidebar }) => {
             className={cn(isMobile ? 'text-white hover:bg-white/10' : 'text-garage-primary hover:bg-garage-primary/10')}
             asChild
           >
-            <Link to='/profile'>
+            {/* <Link to='/profile'> */}
               <User className='h-5 w-5' />
-            </Link>
+            {/* </Link> */}
           </Button>
         </div>
       </div>

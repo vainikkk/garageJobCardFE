@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../ui/button';
-import { Share2, FileText, Download, Printer, MessageCircle, Copy, BarChart4 } from 'lucide-react';
+import { Share2, FileText, Printer, MessageCircle, Copy, BarChart4 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   DropdownMenu,

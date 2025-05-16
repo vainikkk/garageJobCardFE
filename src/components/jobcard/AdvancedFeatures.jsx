@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../ui/button';
-import { Camera, Clipboard, Car, Clock, Calendar, Bell, Phone, PenTool, ListChecks, Tag } from 'lucide-react';
+import { Camera, Clipboard, Car, Clock, Calendar, Bell, Phone, ListChecks, Tag } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { toast } from 'sonner';
 import { Switch } from '../ui/switch';
@@ -62,7 +62,8 @@ export default function AdvancedFeatures() {
               <div className='grid grid-cols-3 sm:grid-cols-4 gap-3 mt-3'>
                 {vehiclePhotos.map((photo, index) => (
                   <div key={index} className='aspect-square rounded-lg overflow-hidden bg-gray-100 border'>
-                    <img src={photo} alt={`Vehicle photo ${index + 1}`} className='w-full h-full object-cover' />
+                    {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+                    <img src={photo} alt={`Vehicle ${index + 1}`} className='w-full h-full object-cover' />
                   </div>
                 ))}
               </div>

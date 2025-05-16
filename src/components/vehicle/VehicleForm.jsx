@@ -12,6 +12,7 @@ import { Textarea } from '../ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Card, CardContent } from '../ui/card';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 // Define schema for form validation
 const vehicleSchema = z.object({
@@ -40,7 +41,7 @@ const VehicleForm = ({ initialData, vehicleId, onSave, preselectedCustomerId }) 
 
   // Initialize form with default values or initial data
   const form = useForm({
-    // resolver: zodResolver(vehicleSchema),
+    resolver: zodResolver(vehicleSchema),
     defaultValues: {
       customerId: preselectedCustomerId || '',
       make: '',

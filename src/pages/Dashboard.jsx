@@ -1,20 +1,9 @@
 import PageLayout from '../components/layout/PageLayout';
 import StatCard from '../components/dashboard/StatCard';
 import QuickAction from '../components/dashboard/QuickAction';
-import RecentJobCard, { JobCardData } from '../components/dashboard/RecentJobCard';
+import RecentJobCard from '../components/dashboard/RecentJobCard';
 import SearchBar from '../components/common/SearchBar';
-import {
-  Car,
-  CheckSquare,
-  FileText,
-  Plus,
-  List,
-  Users,
-  Search,
-  TrendingUp,
-  AlertTriangle,
-  DollarSign,
-} from 'lucide-react';
+import { Car, CheckSquare, FileText, Plus, List, Users, TrendingUp, AlertTriangle, DollarSign } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import LowStockAlert from '../components/inventory/LowStockAlert';

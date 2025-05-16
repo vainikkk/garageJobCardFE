@@ -4,7 +4,6 @@ import { Card } from '../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Button } from '../components/ui/button';
 import { Plus } from 'lucide-react';
-import { PredefinedService } from '../components/services/PredefinedServicesList';
 import { useToast } from '../hooks/use-toast';
 import ServiceForm from '../components/services/ServiceForm';
 import ServiceList from '../components/services/ServiceList';
