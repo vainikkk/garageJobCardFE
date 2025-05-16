@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import JobCards from './pages/JobCardDetails';
+// import JobCards from './pages/JobCardDetails';
 // import Customers from './pages/Customers';
 // import Vehicles from './pages/Vehicles';
 import Services from './pages/Services';
