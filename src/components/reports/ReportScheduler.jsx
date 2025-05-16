@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 import { toast } from 'sonner';
-import { Label } from '../components/ui/label';
-import { Switch } from '../components/ui/switch';
+import { Label } from '../ui/label';
+import { Switch } from '../ui/switch';
 
 const ReportScheduler = ({ onSchedule, defaultTime = '18:00', defaultPhoneNumber = '', defaultEnabled = false }) => {
   const [scheduledTime, setScheduledTime] = useState(defaultTime);

@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Input } from '../components/ui/input';
-import { Label } from '../components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { jobCards } from '../../lib/mockData';
 import { Calendar, Share2 } from 'lucide-react';
 import { format } from 'date-fns';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { jobCards } from '../../lib/mockData';
 import WhatsAppShare from '../dialogs/WhatsAppShare';
 import { formatCurrency } from '../../lib/utils';
-import { toast } from '../components/ui/use-toast';
+import { toast } from '../ui/use-toast';
 
 const DailyReport = () => {
   const [reportTime, setReportTime] = useState('18:00');
@@ -37,16 +37,16 @@ const DailyReport = () => {
     job => job.status === 'completed' && new Date(job.updatedAt).getTime() >= today.getTime()
   );
 
-  const completedYesterday = jobCards.filter(
-    job =>
-      job.status === 'completed' &&
-      new Date(job.updatedAt).getTime() >= yesterday.getTime() &&
-      new Date(job.updatedAt).getTime() < today.getTime()
-  );
+  // const completedYesterday = jobCards.filter(
+  //   job =>
+  //     job.status === 'completed' &&
+  //     new Date(job.updatedAt).getTime() >= yesterday.getTime() &&
+  //     new Date(job.updatedAt).getTime() < today.getTime()
+  // );
 
-  const paymentPendingJobs = jobCards.filter(
-    job => job.paymentStatus === 'unpaid' || job.paymentStatus === 'partially-paid'
-  );
+  // const paymentPendingJobs = jobCards.filter(
+  //   job => job.paymentStatus === 'unpaid' || job.paymentStatus === 'partially-paid'
+  // );
 
   // Monthly summary
   const allJobsThisMonth = jobCards.filter(
@@ -65,39 +65,39 @@ const DailyReport = () => {
     0
   );
 
-  const generateReportText = () => {
-    const currentDate = format(new Date(), 'MMMM d, yyyy');
+  // const generateReportText = () => {
+  //   const currentDate = format(new Date(), 'MMMM d, yyyy');
 
-    let reportText = `GARAGE SERVICE PRO - DAILY REPORT\n`;
-    reportText += `Date: ${currentDate}\n\n`;
+  //   let reportText = `GARAGE SERVICE PRO - DAILY REPORT\n`;
+  //   reportText += `Date: ${currentDate}\n\n`;
 
-    reportText += `PENDING JOBS (${pendingJobs.length}):\n`;
-    pendingJobs.forEach(job => {
-      reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${job.status}\n`;
-    });
+  //   reportText += `PENDING JOBS (${pendingJobs.length}):\n`;
+  //   pendingJobs.forEach(job => {
+  //     reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${job.status}\n`;
+  //   });
 
-    reportText += `\nCOMPLETED TODAY (${completedToday.length}):\n`;
-    completedToday.forEach(job => {
-      reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${formatCurrency(job.totalAmount)}\n`;
-    });
+  //   reportText += `\nCOMPLETED TODAY (${completedToday.length}):\n`;
+  //   completedToday.forEach(job => {
+  //     reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${formatCurrency(job.totalAmount)}\n`;
+  //   });
 
-    reportText += `\nCOMPLETED YESTERDAY (${completedYesterday.length}):\n`;
-    completedYesterday.forEach(job => {
-      reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${formatCurrency(job.totalAmount)}\n`;
-    });
+  //   reportText += `\nCOMPLETED YESTERDAY (${completedYesterday.length}):\n`;
+  //   completedYesterday.forEach(job => {
+  //     reportText += `- #${job.id} | ${job.customerName} | ${job.vehicleReg} | ${formatCurrency(job.totalAmount)}\n`;
+  //   });
 
-    reportText += `\nMONTHLY SUMMARY:\n`;
-    reportText += `- Total Jobs: ${allJobsThisMonth.length}\n`;
-    reportText += `- Total Revenue: ${formatCurrency(totalRevenue)}\n`;
-    reportText += `- Pending Payments: ${formatCurrency(pendingPayments)}\n`;
+  //   reportText += `\nMONTHLY SUMMARY:\n`;
+  //   reportText += `- Total Jobs: ${allJobsThisMonth.length}\n`;
+  //   reportText += `- Total Revenue: ${formatCurrency(totalRevenue)}\n`;
+  //   reportText += `- Pending Payments: ${formatCurrency(pendingPayments)}\n`;
 
-    reportText += `\nPAYMENT PENDING JOBS (${paymentPendingJobs.length}):\n`;
-    paymentPendingJobs.forEach(job => {
-      reportText += `- #${job.id} | ${job.customerName} | ${formatCurrency(job.totalAmount)}\n`;
-    });
+  //   reportText += `\nPAYMENT PENDING JOBS (${paymentPendingJobs.length}):\n`;
+  //   paymentPendingJobs.forEach(job => {
+  //     reportText += `- #${job.id} | ${job.customerName} | ${formatCurrency(job.totalAmount)}\n`;
+  //   });
 
-    return reportText;
-  };
+  //   return reportText;
+  // };
 
   const handleScheduleReport = () => {
     // In a real app, this would set up the scheduled report in the backend

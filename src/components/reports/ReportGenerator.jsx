@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Label } from '../components/ui/label';
-import WhatsAppShare from '../components/dialogs/WhatsAppShare';
 import { toast } from 'sonner';
-import { ArrowRight, FileText, Share2 } from 'lucide-react';
+import { Button } from '../ui/button';
+import { Card, CardContent } from '../ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { Label } from '../ui/label';
+import WhatsAppShare from '../dialogs/WhatsAppShare';
+import { FileText, Share2 } from 'lucide-react';
 
 const ReportGenerator = ({ ownerPhoneNumber = '' }) => {
   const [reportType, setReportType] = useState('daily');

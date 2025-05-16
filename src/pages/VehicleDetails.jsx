@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
 import { Button } from '../components/ui/button';
-import { vehicles, customers, jobCards } from '../../lib/mockData';
+import { vehicles, customers, jobCards } from '../lib/mockData';
 import { Car, ArrowLeft, Calendar, User, Edit, KeyRound, ListChecks, TrendingUp, Settings } from 'lucide-react';
 import { format } from 'date-fns';
 import ServiceHistory from '../components/vehicle/ServiceHistory';

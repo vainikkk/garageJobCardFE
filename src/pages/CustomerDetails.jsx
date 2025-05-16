@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
 import { Button } from '../components/ui/button';
-import { customers, vehicles, jobCards } from '../../lib/mockData';
+import { customers, vehicles, jobCards } from '../lib/mockData';
 import { User, ArrowLeft, Edit, Phone, Mail, MapPin, Car, Calendar, Plus } from 'lucide-react';
 
 const CustomerDetails = () => {

@@ -21,6 +21,10 @@ import JobCardList from './pages/JobCardList';
 import InventoryList from './pages/InventoryList';
 import InventoryNew from './pages/InventoryNew';
 import MechanicList from './pages/MechanicList';
+import JobCardDetails from './pages/JobCardDetails';
+import CustomerDetails from './pages/CustomerDetails';
+import Reports from './pages/Reports';
+import VehicleDetails from './pages/VehicleDetails';
 
 function App() {
   return (
@@ -33,16 +37,20 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/job-cards' element={<JobCardList />} />
         <Route path='/job-cards/new' element={<JobCardNew />} />
+        <Route path='/job-cards/:id' element={<JobCardDetails />} />
         <Route path='/customers' element={<CustomerList />} />
         <Route path='/customers/new' element={<CustomerNew />} />
+        <Route path='/customers/:id' element={<CustomerDetails />} />
         <Route path='/vehicles' element={<VehicleList />} />
         <Route path='/vehicles/new' element={<VehicleNew />} />
+        <Route path='/vehicles/:id' element={<VehicleDetails />} />
         <Route path='/inventory' element={<InventoryList />} />
         <Route path='/inventory/new' element={<InventoryNew />} />
         <Route path='/mechanics' element={<MechanicList />} />
         <Route path='/services' element={<Services />} />
         <Route path='/settings' element={<AppSettings />} />
         <Route path='/testing' element={<Testing />} />
+        <Route path='/reports' element={<Reports />} />
       </Routes>
     </Router>
   );

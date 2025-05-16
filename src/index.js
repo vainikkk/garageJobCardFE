@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'next-themes';
 
+const inter = document.createElement('link');
+inter.rel = 'stylesheet';
+inter.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
